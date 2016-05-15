@@ -9,6 +9,11 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+# Set configurations
+config[:js_dir] = 'javascripts'
+config[:css_dir] = 'stylesheets'
+config[:img_dir] = 'images'
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -37,8 +42,11 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
+
+  # Set the host
+  config[:host] = "https://abhis.ws"
 end
