@@ -1,20 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<head>
+  <title><%= current_page.data.title || "Abhishek Dey Das" %></title>
+  <%= stylesheet_link_tag "bootstrap" %>
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+  <script type="text/javascript">
+    function gen_mail_to_link(lhs,rhs) {
+    document.write("<a href=\"mailto");
+    document.write(":" + lhs + "@");
+    document.write(rhs + "\">" + lhs + "@" + rhs + "<\/a>");
+  }
+  </script>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+    <div align="center"><h2><%= current_page.data.title || "Abhishek Dey Das" %></h2></div>
+    <div align="center">
+      Email: 
+      <script type="text/javascript"> 
+          gen_mail_to_link('abhishek','abhis.ws');
+      </script>
+      <noscript>
+          <em>Please enable javascript to see my email address.</em>
+      </noscript> <br /> 
+      <a href="https://www.linkedin.com/in/adeydas" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/adeydas" target="_blank">Github</a>
+    </div>
+  </div>
 
-    <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
-  </head>
+  <%= yield %>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
-  </body>
+</div>
+</body>
 </html>
