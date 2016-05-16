@@ -1,0 +1,12 @@
+{
+	"primenu": [ 
+		{
+			"title": "Home",
+			"link": "/index.html"
+		},
+		{
+			"title": "Projects",
+			"link": "/projects.html"
+		}
+	]
+}

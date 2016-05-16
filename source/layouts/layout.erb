@@ -3,24 +3,29 @@
 <head>
   <title><%= current_page.data.title || "Abhishek Dey Das" %></title>
   <%= stylesheet_link_tag "bootstrap" %>
-
-  <script type="text/javascript">
-    function gen_mail_to_link(lhs,rhs) {
-    document.write("<a href=\"mailto");
-    document.write(":" + lhs + "@");
-    document.write(rhs + "\">" + lhs + "@" + rhs + "<\/a>");
-  }
-  </script>
-
+  <%= javascript_include_tag  "all" %>
 </head>
 <body>
 <div class="container">
+
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <% data.menu.primenu.each do |f| %>
+          <li><a href="<%= f.link %>"><%= f.title %></a></li>
+        <% end %>        
+      </ul>
+    </div>
+  </div>
+</nav>
+
   <div class="jumbotron">
-    <div align="center"><h2><%= current_page.data.title || "Abhishek Dey Das" %></h2></div>
+    <div align="center"><h2>Abhishek Dey Das : <%= current_page.data.title || "Abhishek Dey Das" %></h2></div>
     <div align="center">
       Email: 
       <script type="text/javascript"> 
-          gen_mail_to_link('abhishek','abhis.ws');
+          gen_mail_to_link();
       </script>
       <noscript>
           <em>Please enable javascript to see my email address.</em>

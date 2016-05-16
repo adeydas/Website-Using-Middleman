@@ -1,6 +1,7 @@
 ###
 # Page options, layouts, aliases and proxies
 ###
+set :base_url, "https://abhis.ws/"
 
 # Per-page layout changes:
 #
@@ -47,6 +48,9 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
-  # Set the host
-  config[:host] = "https://abhis.ws"
+  # Enable cache buster
+  activate :asset_hash
+
+  # Use relative URLs
+  activate :relative_assets
 end
