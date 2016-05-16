@@ -2,6 +2,7 @@
 # Page options, layouts, aliases and proxies
 ###
 set :base_url, "https://abhis.ws/"
+set :relative_links, true
 
 # Per-page layout changes:
 #

@@ -1,0 +1,21 @@
+---
+title: Monitor VM security in an openstack powered cloud
+description: |-
+  Monitor VM security in an openstack powered cloud.
+---
+This was a study done for a course on Cloud computing. It involved the following goals:
+
+<ul>
+	<li>Established multi-node private cloud using OpenStack (Folsom version)</li>
+	<li>Created and monitored victim and attacker VMs using Horizon (GUI component of OpenStack)</li>
+	<li>Used attacker VM to simulate following attacks on victim VM
+   	<ul>
+   		<li>Denial of Service (DoS) attack using Slow HTTP Test</li>
+   		<li>Denial of Service on SSL port</li>
+   		<li>Port probing using NMap (This is not a attack but the information exposed from this tool can be used in Black Hat Attack process i.e. to study system usage and behavior)</li>
+   		<li>- ARP Spoofing using Nemisis</li>
+   	</ul>
+   	</li>
+	<li>Used Nagios monitoring tool to detect DoS attack; and health of Glance, Keystone and Swift components of OpenStack.</li>
+	<li>Our project was selected for future independent study by [Dr. I-Ling Yen](http://utdallas.edu/~ilyen/).</li>
+</ul>
