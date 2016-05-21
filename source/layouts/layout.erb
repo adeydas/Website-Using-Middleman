@@ -4,6 +4,17 @@
   <title><%= current_page.data.title || "Abhishek Dey Das" %></title>
   <%= stylesheet_link_tag "bootstrap" %>
   <%= javascript_include_tag  "all" %>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+        $.get("localhost:9000/getLatestTweet", function(data){
+            // Display the returned data in browser
+            $("#tweet").html(data);
+        });
+    
+});
+</script>
+
 </head>
 <body>
 <div class="container">
