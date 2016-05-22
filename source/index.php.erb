@@ -70,7 +70,7 @@ description: |-
   <strong>What I've been tweeting (<a href="https://twitter.com/adeydas">@adeydas</a>)</strong>: 
   <?php
     header('Access-Control-Allow-Origin: *');
-    $url = "http://localhost:9000/getLatestTweet";
+    $url = "https://apps.abhis.ws/twitterapi-1.0/getLatestTweet";
     $response = file_get_contents($url);
     echo $response;
   ?>
