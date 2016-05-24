@@ -7,6 +7,10 @@
 		{
 			"title": "Projects",
 			"link": "/projects.html"
+		},
+		{
+			"title": "Photos"
+			"link": "/photos.php"
 		}
 	]
 }
