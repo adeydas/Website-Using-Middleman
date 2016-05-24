@@ -1,0 +1,21 @@
+---
+title: Home
+layout: gallery_layout
+description: |-
+  Homepage of Abhishek Dey Das.
+---
+<?php
+    header('Access-Control-Allow-Origin: *');
+    $url = "https://apps.abhis.ws/twitterapi-1.0/getLatestTweet";
+    $response = file_get_contents($url);
+    $decoded_response = json_decode($response);
+?>
+<div id="links">
+<?php
+	foreach($decoded_response as $d_uri) {
+?>
+    <a href="<?php echo $d_uri ?>" data-gallery>
+        <img src="<?php echo $d_uri ?>" height="250px">
+    </a>
+<?php } ?>
+</div>
