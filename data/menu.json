@@ -2,7 +2,7 @@
 	"primenu": [ 
 		{
 			"title": "Home",
-			"link": "/index.html"
+			"link": "/index.php"
 		},
 		{
 			"title": "Projects",
