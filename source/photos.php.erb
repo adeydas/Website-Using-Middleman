@@ -8,7 +8,7 @@ description: |-
     header('Access-Control-Allow-Origin: *');
     $url = "https://apps.abhis.ws/twitterapi-1.0/getLatestTweet";
     $response = file_get_contents($url);
-    $decoded_response = json_decode($response);
+    $decoded_response = json_decode($response, true);
 ?>
 <div id="links">
 <?php
