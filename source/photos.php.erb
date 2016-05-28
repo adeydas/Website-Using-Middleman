@@ -15,7 +15,7 @@ description: |-
 	foreach($decoded_response as $d_uri) {
 ?>
     <a href="<?php echo $d_uri ?>" data-gallery>
-        <img class="lazy" src="<%= image_tag "loading.jpg", :relative => true %>" data-original="<?php echo $d_uri ?>"  height="250px">
+        <img class="lazy" src="../images/loading.jpg" data-original="<?php echo $d_uri ?>"  height="250px">
     </a>
 <?php } ?>
 </div>
