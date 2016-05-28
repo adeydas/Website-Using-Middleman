@@ -11,6 +11,10 @@
 		{
 			"title": "Photos",
 			"link": "/photos.php"
+		},
+		{
+			"title": "Blog",
+			"link": "/blog.html"
 		}
 	]
 }
