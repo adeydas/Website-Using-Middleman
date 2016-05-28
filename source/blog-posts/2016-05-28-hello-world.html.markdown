@@ -5,3 +5,9 @@ tags: welcome
 category: Misc
 ---
 Welcome to my blog. In the times to come, this space on my little home page would contain (hopefully) interesting articles on the myraid of things that interest me. So stay tuned!
+
+<pre><code class="java">
+ public void hello() {
+  hello();
+ }
+</code></pre>
