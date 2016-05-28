@@ -3,11 +3,9 @@
 <head>
   <title><%= current_page.data.title || "Abhishek Dey Das" %></title>
   <%= stylesheet_link_tag "bootstrap", "bootstrap-image-gallery", "blueimp-gallery.min" %>
-  <%= javascript_include_tag  "all", "jquery.lazyload" %>
+  <%= javascript_include_tag  "all" %>
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript">
-    $("img.lazy").lazyload();
-  </script>
+
 </head>
 <body>
 <div class="container">
