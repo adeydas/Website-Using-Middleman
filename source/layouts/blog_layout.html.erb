@@ -37,10 +37,10 @@
       <a href="https://github.com/adeydas" target="_blank">Github</a>
     </div>
   </div>
-    Posted on <span class="label label-success"><%= current_page.date.strftime('%b %e') %></span> with tags: 
+    <p>Posted on <span class="label label-success"><%= current_page.date.strftime('%b %e') %></span> with tags: 
     <% current_page.tags.each do |tag| %>
       <span class="label label-info"><%= link_to tag, tag_path(tag) %></span>
-    <% end %>
+    <% end %></p><p>&nbsp;</p>
 
     <%= yield %>
 
