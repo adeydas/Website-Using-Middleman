@@ -15,6 +15,10 @@
 		{
 			"title": "Blog",
 			"link": "/blog.html"
+		},
+		{
+			"title": "Algorithms",
+			"link": "https://abhis.ws/algorithms/"
 		}
 	]
 }
