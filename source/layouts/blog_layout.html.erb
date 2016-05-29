@@ -37,13 +37,12 @@
       <a href="https://github.com/adeydas" target="_blank">Github</a>
     </div>
   </div>
-
-    <%= yield %>
-
     Posted on <span class="label label-success"><%= current_page.date.strftime('%b %e') %></span> with tags: 
     <% current_page.tags.each do |tag| %>
       <span class="label label-info"><%= link_to tag, tag_path(tag) %></span>
     <% end %>
+
+    <%= yield %>
 
   <div class="jumbotron">
     <div align="center">&copy; All copyrights reserved. All information on this site are personal opinion and doesn't reflect that of my employer. Powered by <a href="https://middlemanapp.com/">Middleman</a>.</div>
