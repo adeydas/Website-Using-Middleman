@@ -15,7 +15,7 @@ description: |-
 	foreach($decoded_response as $d_uri) {
 ?>
     <a href="<?php echo $d_uri ?>" data-gallery>
-        <img class="lazy" src="<?php echo $d_uri ?>"  height="250px">
+        <img class="lazyload" src="https://abhis.ws/images/loading.jpg" data-src="<?php echo $d_uri ?>"  height="250px">
     </a>
 <?php } ?>
 </div>
