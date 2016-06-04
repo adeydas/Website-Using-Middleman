@@ -51,11 +51,11 @@
     <% next_article = current_page.next_article %>
     <div align="center">
       <% if prev_article %>
-        <a href="<%= prev_article.url =%>" rel="Previous post" class="btn btn-info"> Previous </a>
+        <a href="<%= prev_article.url =%>" rel="Previous post" class="btn btn-info"> <%= prev_article.title =%> </a>
       <% end %>
 
       <% if next_article %>
-        <a href="<%= next_article.url =%>" rel="Next post" class="btn btn-info"> Next </a>
+        <a href="<%= next_article.url =%>" rel="Next post" class="btn btn-info"> <%= next_article.title =%> </a>
       <% end %>
     </div>
 
