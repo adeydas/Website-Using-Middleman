@@ -45,6 +45,22 @@
 
     <%= yield %>
 
+    <hr />
+
+    <% prev_article = current_page.previous_article %>
+    <% next_article = current_page.next_article %>
+    <div align="center">
+      <% if prev_article %>
+        <a href="<%= prev_article.url =%>" rel="Previous post" class="btn btn-info"> Previous </a>
+      <% end %>
+
+      <% if next_article %>
+        <a href="<%= next_article.url =%>" rel="Next post" class="btn btn-info"> Next </a>
+      <% end %>
+    </div>
+
+    <p>&nbsp;</p>
+
   <div class="jumbotron">
     <div align="center">&copy; All copyrights reserved. All information on this site are personal opinion and doesn't reflect that of my employer. Powered by <a href="https://middlemanapp.com/">Middleman</a>.</div>
     <div align="center"><a href="http://twitter.com/adeydas">Twitter</a> | <a href="https://www.facebook.com/deydas.abhishek">Facebook</a></div>
