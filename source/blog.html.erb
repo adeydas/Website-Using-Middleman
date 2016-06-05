@@ -14,9 +14,7 @@ per_page: 5
 <% page_articles.each_with_index do |article, i| %>
   <h2><%= link_to article.title, article %></h2>
   <p><span class="label label-success"><%= article.date.strftime('%b %e') %></span></p>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.summary(250, '>>') %>
+  <%= Nokogiri::HTML(article.summary).text %>
 <% end %>
 
 <% if paginate %>
