@@ -12,9 +12,6 @@ Welcome to my blog. In the times to come, this space on my little home page woul
  }
 </code></pre>
 
-<?php
-    header('Access-Control-Allow-Origin: *');
-    $url = "https://apps.abhis.ws/gitlab-snipetter-1.0/getSnippet?projectid=18&snippetid=4";
-    $response = file_get_contents($url);
-    echo $response;
-  ?>
+
+
+<%= partial(:codeSnippet, :locals => { :projectId => "18", :snippetId => "4" }) %>
