@@ -19,4 +19,4 @@ Welcome to my blog. In the times to come, this space on my little home page woul
     $response = file_get_contents($url);
     $obj = json_decode($response);
 ?>
-<pre><code class="language-java"><?php echo $obj->{'content'} ?></code></pre>
+<pre><code class="language-<?php echo $obj->{'language'} ?>"><?php echo $obj->{'content'} ?></code></pre>
