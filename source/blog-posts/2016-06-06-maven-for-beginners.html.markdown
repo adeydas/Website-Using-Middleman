@@ -51,7 +51,7 @@ A **Project Object Model (POM)** provides all the configuration for a single pro
 
 Maven is very modular in the sense every bit of configuration can be handled with plugins. Maven plugins can be configured to run specific goals/phases with certain configuration parameters. Let's take the example of the maven-surefire-plugin.
 
-<script src="https://gist.github.com/adeydas/6b26384e3ae21cb36c1aea1d06bede24.js"></script>
+<pre><code class="language-java"><?php getCodeSnippet(18,5); ?></code></pre>
 
 Take for instance, the phase `integration-test`. The goal for it is `test` which tells Maven to run it as a `test` phases aka it tells Maven, run them as tests. It also says Maven should include all files that matches the regex `**/*IntegrationTest.java`.
 
