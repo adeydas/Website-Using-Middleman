@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Abhishek Dey Das : <%= current_page.data.title || "Abhishek Dey Das" %></title>
-  <%= stylesheet_link_tag "bootstrap", "blog" %>
-  <%= javascript_include_tag  "all" %>
+  <%= stylesheet_link_tag "bootstrap", "blog", "prism" %>
+  <%= javascript_include_tag  "all", "prism" %>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
@@ -20,6 +20,16 @@
 
   </script>
   <!-- End Google Analytics -->
+
+  <?php
+    function getCodeSnippet($projectId, $snippetId) {
+      header('Access-Control-Allow-Origin: *');
+      $url = "https://apps.abhis.ws/gitlab-snipetter-1.0/getSnippet?projectid=" . $projectId . "&snippetid=" . $snippetId;
+      $response = file_get_contents($url);
+      $obj = json_decode($response);
+      echo $obj->{'content'};
+    }
+  ?>
 </head>
 <body>
 <div class="container">

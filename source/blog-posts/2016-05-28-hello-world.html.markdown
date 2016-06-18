@@ -6,8 +6,4 @@ category: Misc
 ---
 Welcome to my blog. In the times to come, this space on my little home page would contain (hopefully) interesting articles on the myraid of things that interest me. So stay tuned!
 
-<pre><code class="java">
- public void welcome() {
-  welcome(); //Welcome forever since ye so precious....
- }
-</code></pre>
+<pre><code class="language-java"><?php getCodeSnippet(18,4); ?></code></pre>
