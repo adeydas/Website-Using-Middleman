@@ -11,3 +11,5 @@ Welcome to my blog. In the times to come, this space on my little home page woul
   welcome(); //Welcome forever since ye so precious....
  }
 </code></pre>
+
+<?php echo "test" ?>
