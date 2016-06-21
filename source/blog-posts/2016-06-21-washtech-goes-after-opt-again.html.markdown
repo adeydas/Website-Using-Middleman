@@ -10,5 +10,5 @@ The group of tech workers that filed a lawsuit on the STEM extension and got it 
 * The OPT program denies labor protections to US workers. - This is despite the fact that the new STEM extension clearly states that a position filled under the STEM extension should not displace a US worker.
 * It allows increased competition. - They had the same argument before.
 * Allows unfair competition.
-* Provides foregin students the benefit of mentoring programs. - This is not exclusive. The STEM extension is meant to be training time so students can get a full time job. US workers can get similar training too, I suppose.
+* Provides foregin students the benefit of mentoring programs. - This is not exclusive. US workers can get similar training too, I suppose.
 * Violates procedural rights of US workers by failing to include the question of whether OPT should be expanded in the first place.
