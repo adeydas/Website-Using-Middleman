@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag "bootstrap", "bootstrap-image-gallery", "blueimp-gallery.min" %>
   <%= javascript_include_tag  "all", "lazysizes.min" %>
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link rel="alternate" type="application/rss+xml" title="Abhishek Dey Das &raquo; Feed" href="https://abhis.ws/feed.xml" />
   <!-- Google Analytics start -->
   <script>
@@ -24,7 +25,16 @@
 
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+    <div class="navbar-header">
+      <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>     
+    </div>
+    
+    <div style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
         <% data.menu.primenu.each do |f| %>
           <li><a href="<%= f.link %>"><%= f.title %></a></li>
