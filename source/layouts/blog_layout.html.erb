@@ -23,16 +23,6 @@
 
   </script>
   <!-- End Google Analytics -->
-
-  <?php
-    function getCodeSnippet($projectId, $snippetId) {
-      header('Access-Control-Allow-Origin: *');
-      $url = "https://apps.abhis.ws/gitlab-snipetter-1.0/getSnippet?projectid=" . $projectId . "&snippetid=" . $snippetId;
-      $response = file_get_contents($url);
-      $obj = json_decode($response);
-      echo $obj->{'content'};
-    }
-  ?>
 </head>
 <body>
 <div class="container">
