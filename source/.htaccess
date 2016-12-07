@@ -1,2 +1,2 @@
 AddType application/x-httpd-php .htm .html
-ErrorDocument 404 https://abhis.ws/404.html
+ErrorDocument 404 https://abhishekdeydas.com/404.html
