@@ -19,18 +19,19 @@ description: |-
       header('Access-Control-Allow-Origin: *');
       $url = "https://apps.abhis.ws/rss-reader-1.0/get/blogposts";
       $response = file_get_contents($url);
-      $decoded_resp = json_decode($response, true);
-      var_dump($decoded_resp);
-      foreach($j as $decoded_resp) {
+      $decoded_resp = json_decode($response);
+      $cnt = count($decoded_resp);
+      for($i=0; $i<$cnt; $i++) {
+        $thisone = $decoded_resp[$i];
         ?>
         <td>
         <?php
-        echo(date('Y-m-d H:i:s', $j->publishedDate));
+        echo(date('Y-m-d H:i:s', $thisone->publishedDate));
         ?>
         </td>
         <td>
         <?php
-        echo("<a href=\"" . $j->link . "\" target=\"_blank\">" . $j->title . "</a>");
+        echo("<a href=\"" . $thisone->link . "\" target=\"_blank\">" . $thisone->title . "</a>");
         ?>
         </td>
         <?php
