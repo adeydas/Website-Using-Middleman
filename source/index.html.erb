@@ -20,7 +20,7 @@ description: |-
       $url = "https://apps.abhis.ws/rss-reader-1.0/get/blogposts";
       $response = file_get_contents($url);
       $decoded_resp = json_decode($response, true);
-
+      var_dump(@decoded_resp);
       foreach($j as $decoded_resp) {
         ?>
         <td>
