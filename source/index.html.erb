@@ -14,12 +14,29 @@ description: |-
     </tr>
   </thead>
   <tbody>
-    <% page_articles.each_with_index do |article, i| %>
     <tr>
-      <td><%= article.date.strftime('%b %e, %Y') %></td>
-      <td><%= link_to article.title, article %></td>
+    <?php
+      header('Access-Control-Allow-Origin: *');
+      $url = "https://apps.abhis.ws/rss-reader-1.0/get/blogposts";
+      $response = file_get_contents($url);
+      $decoded_resp = json_decode($response, true);
+
+      foreach($j as $decoded_resp) {
+        ?>
+        <td>
+        <?php
+        echo(date('Y-m-d H:i:s', $j->publishedDate));
+        ?>
+        </td>
+        <td>
+        <?php
+        echo("<a href=\"" . $j->link . "\" target=\"_blank\">" . $j->title . "</a>");
+        ?>
+        </td>
+        <?php
+      }
+    ?>
     </tr>
-    <% end %>
   </tbody>
 </table>
 
