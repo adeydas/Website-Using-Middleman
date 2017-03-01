@@ -14,11 +14,11 @@ description: |-
     </tr>
   </thead>
   <tbody>
-    <tr>
+    
     
   <% page_articles.each_with_index do |article, i| %>
-    <td><%= article.date.strftime('%b %e, %Y') %></td> <td><%= link_to article.title, article %></td>
+    <tr><td><%= article.date.strftime('%b %e, %Y') %></td> <td><%= link_to article.title, article %></td></tr>
   <% end %>
-    </tr>
+    
   </tbody>
 </table>
