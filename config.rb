@@ -3,6 +3,7 @@
 ###
 set :base_url, "https://abhis.ws/"
 set :relative_links, true
+set :markdown_engine, :kramdown
 
 # Per-page layout changes:
 #
