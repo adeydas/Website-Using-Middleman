@@ -15,6 +15,7 @@ gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 gem 'nokogiri'
 gem "middleman-syntax"
+gem 'middleman-imageoptim'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 

@@ -77,4 +77,7 @@ configure :build do
 
   # Compress output
   activate :gzip
+
+  # Compress image
+  activate :imageoptim
 end
