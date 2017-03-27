@@ -67,7 +67,13 @@
     <% end %></p><p>&nbsp;</p>
 
     <div class="blog-post">
-    <%= yield %>
+      <% cover_image = current_page.data.coverimage %>
+      <% if cover_image %>
+        <div align="center">
+          <a href="<%= cover_image %>"><img src="<%= cover_image %>" style="height: 500px;" height="500px" title="<%= current_page.title %>" alt="<%= current_page.title %>" /></a>
+        </div>
+      <% end %>
+      <%= yield %>
     </div>
 
     <hr />
