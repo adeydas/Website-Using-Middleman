@@ -9,7 +9,7 @@ description: |-
 <div align="center">
 <% page_articles.each_with_index do |article, i| %>
     <% if article.data.category == 'Photography' %>
-      <a href="<%= article.url %>"><img src="<%= article.data.coverimage %>" style="height: 200px;" height="200px" title="<%= article.title %>" alt="<%= article.title %>" class="img-thumbnail" /></a>
+      <a href="<%= article.url %>"><img class="lazy" data-original="<%= article.data.coverimage %>" style="height: 200px;" height="200px" title="<%= article.title %>" alt="<%= article.title %>" class="img-thumbnail" /></a>
     <% end %>  
 <% end %>
 </div>
