@@ -26,8 +26,10 @@ description: |-
   <tbody>
     
   <% page_articles.each_with_index do |article, i| %>
-    <tr><td><%= article.date.strftime('%b %e, %Y') %></td> <td><%= link_to article.title, article %></td>
+    <% if article.data.category != 'Photography' %>
+      <tr><td><%= article.date.strftime('%b %e, %Y') %></td> <td><%= link_to article.title, article %></td>
       <td><%= article.data.category %></td></tr>
+      <% end %>
   <% end %>
     
   </tbody>
