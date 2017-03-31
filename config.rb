@@ -31,6 +31,15 @@ helpers do
     end
     return categories
   end
+
+  def build_categories_per_post(articles)
+    posts = []
+    articles.each do |article|
+      posts.push(article) unless posts.include? article
+    end
+    return posts
+  end
+
 end
 
 activate :blog do |blog|

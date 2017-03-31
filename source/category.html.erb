@@ -1,0 +1,24 @@
+---
+title: Posts in this category
+description: |-
+  Posts in this category
+---
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+   	<% build_categories_per_post(page_articles).each_with_index do |article, i| %>
+		<tr>
+			<td><%= article.date.strftime('%b %e, %Y') %></td>
+			<td><%= link_to article.title, article %></td>
+		</tr>
+	<% end %>
+    
+  </tbody>
+</table>

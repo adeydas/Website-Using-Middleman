@@ -63,7 +63,11 @@
     <p>Posted on <span class="label label-success"><%= current_page.date.strftime('%b %e, %Y') %></span> with tags: 
     <% current_page.tags.each do |tag| %>
       <span class="label label-info"><%= link_to tag, tag_path(tag) %></span>
-    <% end %></p><p>&nbsp;</p>
+    <% end %>
+    Filed under <span class="label label-info"><%= link_to current_page.data.category, category_path(current_page.data.category) %></span>
+   </p>
+
+    <p>&nbsp;</p>
 
     <div class="blog-post">
       <% cover_image = current_page.data.coverimage %>
