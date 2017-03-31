@@ -1,7 +1,7 @@
 ###
 # Page options, layouts, aliases and proxies
 ###
-set :base_url, "https://abhis.ws/"
+set :base_url, "https://abhishekdeydas.com/"
 set :relative_links, true
 set :markdown_engine, :kramdown
 
@@ -22,6 +22,16 @@ page '/*.txt', layout: false
 ###
 # Helpers
 ###
+helpers do
+  def build_categories(articles)
+    categories = []
+    articles.each do |article|
+      category = article.metadata[:page]['category']
+      categories.push(category) unless categories.include? category
+    end
+    return categories
+  end
+end
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
@@ -46,6 +56,15 @@ activate :blog do |blog|
   blog.paginate = true
   blog.per_page = 10
   blog.page_link = "page/{num}"
+
+  # Category
+  blog.custom_collections = {
+    category: {
+      link: 'categories/{category}.html',
+      template: 'category.html'
+    }
+  }
+
 end
 
 page "/feed.xml", layout: false
