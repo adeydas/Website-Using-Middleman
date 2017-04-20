@@ -8,7 +8,7 @@ description: |-
 <h2>Recent photos</h2>
 <div align="center">
 <% page_articles.each_with_index do |article, i| %>
-    <% if article.data.category == 'Photography' %>
+    <% if article.data.category == 'Photography' && i < 2 %>
       <a href="<%= article.url %>"><img class="lazy" data-original="<%= article.data.coverimage %>" style="height: 200px;" height="200px" title="<%= article.title %>" alt="<%= article.title %>" class="img-thumbnail" /></a>
     <% end %>  
 <% end %>
